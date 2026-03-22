@@ -1,0 +1,39 @@
+.movie-card {
+  background: rgba(26, 0, 83, 0.4);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  max-width: 270px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.star-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating p,
+.type {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
