@@ -5,7 +5,7 @@ import MovieCard from "./components/MovieCard";
 import {useDebounce} from "react-use"
 import { getTrendingMovies, updateSearchCount } from "./appwrite";
 
-const API_BASE_URL = 'http://www.omdbapi.com';
+const API_BASE_URL = 'https://www.omdbapi.com';
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 
 //const API_OPTIONS ={
@@ -34,7 +34,7 @@ useDebounce(()=>setDebouncedSearchTerm(searchTerm),600,[searchTerm])
 const fetchMovies = async(Search='')=>{
   setIsLoading(true);
   setErrorMessage('');
-
+console.log("API KEY:", import.meta.env.VITE_OMDB_API_KEY);
   try{
       const endpoint = Search ?
       `${API_BASE_URL}/?s=${Search}&apikey=${API_KEY}` :
